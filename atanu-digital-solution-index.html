@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08152f">
+  <meta name="description" content="ATANU DIGITAL SOLUTION — professional digital services to help businesses build a stronger online presence.">
+  <title>ATANU DIGITAL SOLUTION | Digital Services</title>
+  <style>
+    :root{
+      --navy:#08152f; --navy2:#0d2044; --blue:#3688ff; --cyan:#62e0dc;
+      --ink:#17243c; --muted:#66748c; --light:#f4f7fc; --white:#fff;
+      --line:rgba(255,255,255,.13); --shadow:0 18px 55px rgba(7,20,47,.14);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:86px}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .container{width:min(1140px,calc(100% - 40px));margin:auto}
+    .topbar{background:#061127;color:#cbd8ee;font-size:13px;padding:9px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid #e9eef6}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:850;letter-spacing:-.6px;color:var(--navy)}
+    .brand-mark{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:white;font-size:25px;font-weight:900;box-shadow:0 8px 20px #3688ff40}
+    .brand span:last-child b{color:var(--blue)}
+    .navlinks{display:flex;align-items:center;gap:27px;font-size:14px;font-weight:650;color:#34425b}
+    .navlinks a:hover{color:var(--blue)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:12px;padding:13px 20px;background:var(--blue);color:#fff;font-weight:750;box-shadow:0 10px 24px #3688ff38;transition:.25s}
+    .nav-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 15px 28px #3688ff55}
+    .menu-btn{display:none;border:0;background:none;color:var(--navy);font-size:28px;cursor:pointer}
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 85% 25%,#1a4670 0,transparent 32%),linear-gradient(130deg,#07142d,#102a50 60%,#0a1c3a);color:white;padding:94px 0 88px}
+    .hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff12;border-radius:50%;width:430px;height:430px;right:-150px;bottom:-250px}
+    .hero:after{width:580px;height:580px;right:-225px;bottom:-325px}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:54px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:#8ff1e7;background:#62e0dc16;border:1px solid #62e0dc45;border-radius:999px;padding:9px 15px;font-size:12px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}
+    h1{font-size:clamp(42px,6vw,68px);line-height:1.08;letter-spacing:-2.5px;margin:25px 0 22px}
+    h1 span{background:linear-gradient(90deg,#68e3df,#65aaff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy{max-width:620px;color:#c5d2e7;font-size:17px;line-height:1.85}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+    .btn-outline{display:inline-flex;align-items:center;justify-content:center;border:1px solid #ffffff55;border-radius:12px;padding:13px 20px;color:white;font-weight:750;transition:.25s}
+    .btn-outline:hover{background:#ffffff12;transform:translateY(-3px)}
+    .hero-panel{padding:28px;border:1px solid #ffffff25;border-radius:26px;background:linear-gradient(145deg,#ffffff1b,#ffffff08);box-shadow:0 25px 70px #0003;backdrop-filter:blur(12px)}
+    .panel-title{font-size:19px;font-weight:800;margin-bottom:20px}
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    .mini-card{padding:19px;border:1px solid #ffffff1b;border-radius:17px;background:#ffffff0c;min-height:126px}
+    .mini-card strong{display:block;color:var(--cyan);font-size:22px;margin-bottom:5px}
+    .mini-card small{color:#c4d0e4;font-size:13px}
+    .section{padding:88px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 42px}
+    .kicker{font-size:12px;font-weight:850;letter-spacing:1.8px;text-transform:uppercase;color:#2686e9}
+    h2{font-size:clamp(30px,4vw,43px);line-height:1.18;letter-spacing:-1.2px;color:var(--navy);margin:12px 0}
+    .section-head p{color:var(--muted);font-size:16px}
+    .services{background:var(--light)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service-card{background:#fff;border:1px solid #e8eef7;border-radius:20px;padding:27px;box-shadow:0 8px 28px #0c24410a;transition:.3s}
+    .service-card:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:#b8d7ff}
+    .service-icon{width:51px;height:51px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,#e7f1ff,#e3fbfa);color:#1978df;font-size:23px;margin-bottom:19px}
+    .service-card h3{font-size:19px;color:var(--navy);margin-bottom:8px}
+    .service-card p{font-size:14px;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:center}
+    .about-art{min-height:340px;border-radius:26px;background:radial-gradient(circle at 75% 20%,#6be1db55,transparent 30%),linear-gradient(145deg,#0a1b3a,#173d69);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .about-art:before,.about-art:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #ffffff25;border-radius:50%}
+    .about-art:after{width:360px;height:360px}
+    .art-logo{position:relative;z-index:1;width:130px;height:130px;border-radius:36px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--cyan));color:white;font-size:70px;font-weight:900;box-shadow:0 20px 50px #0004}
+    .about-copy p{color:var(--muted);margin:14px 0}
+    .check-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .check-list span{font-weight:700;color:#31415b;font-size:14px}
+    .check-list span:before{content:"✓";color:#18b99b;font-weight:900;margin-right:9px}
+    .process{background:var(--navy);color:white}
+    .process h2{color:white}.process .section-head p{color:#b9c8df}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .step{padding:25px;border:1px solid #ffffff20;border-radius:18px;background:#ffffff0a}
+    .step-no{font-size:13px;color:var(--cyan);font-weight:900;letter-spacing:1px}
+    .step h3{font-size:19px;margin:10px 0}.step p{color:#b9c8df;font-size:14px}
+    .contact{background:linear-gradient(180deg,#f5f8fd,#fff)}
+    .contact-box{display:grid;grid-template-columns:1fr 1fr;gap:35px;background:white;border:1px solid #e8eef7;border-radius:25px;padding:35px;box-shadow:var(--shadow)}
+    .contact-box h2{font-size:34px}
+    .contact-box p{color:var(--muted);margin:12px 0 22px}
+    .contact-list{display:grid;gap:14px}
+    .contact-item{display:flex;gap:13px;align-items:center;padding:13px;border-radius:13px;background:#f5f8fd;font-size:14px;overflow-wrap:anywhere}
+    .contact-item b{display:block;color:var(--navy);font-size:12px;text-transform:uppercase;letter-spacing:.7px}
+    .contact-item span{color:#43516a}
+    .socials{display:flex;gap:11px;margin-top:20px;flex-wrap:wrap}
+    .socials a{padding:10px 15px;border:1px solid #dfe8f5;border-radius:10px;font-size:13px;font-weight:750;color:#1b5fae}
+    .socials a:hover{background:#eaf3ff}
+    footer{background:#061127;color:#aebdd3;padding:27px 0;font-size:13px}
+    footer .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .whatsapp{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#19c783;color:white;font-size:26px;box-shadow:0 12px 30px #19c78366;border:3px solid white;transition:.2s}
+    .whatsapp:hover{transform:scale(1.08)}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}
+    @media(max-width:850px){
+      .navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:white;padding:18px 22px 24px;box-shadow:0 18px 25px #07142d18;flex-direction:column;align-items:stretch;gap:16px}
+      .navlinks.open{display:flex}.navlinks .nav-cta{text-align:center}.menu-btn{display:block}
+      .hero{padding:70px 0}.hero-grid,.about-grid,.contact-box{grid-template-columns:1fr}
+      .hero-grid{gap:35px}.service-grid{grid-template-columns:repeat(2,1fr)}
+      .about-art{min-height:270px}.steps{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .container{width:min(100% - 30px,1140px)}
+      .topbar .container{justify-content:center;text-align:center}
+      .brand{font-size:16px;gap:9px}.brand-mark{width:40px;height:40px;border-radius:13px}
+      .hero{padding:57px 0 62px}h1{font-size:43px;letter-spacing:-1.8px}
+      .hero-copy{font-size:15px}.hero-panel{padding:20px}.mini-card{padding:14px;min-height:112px}
+      .mini-card strong{font-size:19px}.section{padding:65px 0}
+      .service-grid{grid-template-columns:1fr}.service-card{padding:23px}
+      .check-list{grid-template-columns:1fr}.contact-box{padding:23px}
+      .contact-box h2{font-size:29px}.whatsapp{right:15px;bottom:15px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>Professional Digital Solutions for Businesses Worldwide</span><span>WhatsApp: +880 1877-259123</span></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="ATANU DIGITAL SOLUTION home"><span class="brand-mark">A</span><span>ATANU <b>DIGITAL SOLUTION</b></span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="navlinks" id="navLinks">
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#process">How It Works</a><a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Start a Project ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow">✦ Your growth partner in the digital world</div>
+          <h1>Build Your Brand.<br><span>Grow Your Business.</span></h1>
+          <p class="hero-copy">We help businesses strengthen their online presence with practical digital solutions, creative thinking and clear communication. Let’s turn your ideas into a professional digital experience.</p>
+          <div class="hero-actions"><a class="btn" href="#contact">Start a Project ↗</a><a class="btn-outline" href="#services">Explore Services</a></div>
+        </div>
+        <div class="hero-panel reveal delay-1">
+          <div class="panel-title">Digital services. One reliable partner.</div>
+          <div class="mini-grid">
+            <div class="mini-card"><strong>Web</strong><small>Build a professional online presence</small></div>
+            <div class="mini-card"><strong>SEO</strong><small>Help customers discover your business</small></div>
+            <div class="mini-card"><strong>Social</strong><small>Connect with your audience</small></div>
+            <div class="mini-card"><strong>Creative</strong><small>Present your brand with clarity</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head reveal"><div class="kicker">What we do</div><h2>Digital solutions for your next step</h2><p>Flexible support for businesses, professionals and growing brands.</p></div>
+        <div class="service-grid">
+          <article class="service-card reveal"><div class="service-icon">⌘</div><h3>Website Design</h3><p>Responsive, user-friendly business websites designed to present your services and make it easy for customers to contact you.</p></article>
+          <article class="service-card reveal delay-1"><div class="service-icon">⌕</div><h3>SEO Support</h3><p>Practical search optimisation to help improve website structure, content visibility and your online discoverability.</p></article>
+          <article class="service-card reveal delay-2"><div class="service-icon">◎</div><h3>Social Media Support</h3><p>Consistent, professional social media presence with content and profile support for your business.</p></article>
+          <article class="service-card reveal"><div class="service-icon">✧</div><h3>Digital Marketing</h3><p>Thoughtful digital promotion support to help you reach relevant audiences and communicate your offer clearly.</p></article>
+          <article class="service-card reveal delay-1"><div class="service-icon">▧</div><h3>Creative Design</h3><p>Clean visual materials that help your brand look consistent across digital platforms.</p></article>
+          <article class="service-card reveal delay-2"><div class="service-icon">↗</div><h3>Business Online Setup</h3><p>Support with setting up and improving the essential digital touchpoints your customers use to find you.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-art reveal"><div class="art-logo">A</div></div>
+        <div class="about-copy reveal delay-1">
+          <div class="kicker">About us</div><h2>A focused partner for your digital journey</h2>
+          <p>Welcome to <strong>ATANU DIGITAL SOLUTION</strong>. We believe every business deserves a clear, credible and effective online presence.</p>
+          <p>Our approach is built around understanding your goals, communicating clearly and delivering digital work with care. Whether you are starting from scratch or improving an existing presence, we are ready to discuss your project.</p>
+          <div class="check-list"><span>Clear communication</span><span>Creative solutions</span><span>Client-focused service</span><span>Worldwide collaboration</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-head reveal"><div class="kicker">Simple process</div><h2>From your idea to the next step</h2><p>A straightforward way to get your project moving.</p></div>
+        <div class="steps">
+          <div class="step reveal"><div class="step-no">01 / DISCOVER</div><h3>Tell us your goal</h3><p>Share what you need, your audience and the outcome you want to achieve.</p></div>
+          <div class="step reveal delay-1"><div class="step-no">02 / PLAN</div><h3>Agree on the approach</h3><p>We discuss the scope, priorities and a suitable plan before work begins.</p></div>
+          <div class="step reveal delay-2"><div class="step-no">03 / DELIVER</div><h3>Move forward together</h3><p>We keep communication clear as your digital project takes shape.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-box reveal">
+          <div><div class="kicker">Let’s talk</div><h2>Have a project in mind?</h2><p>Tell us what you are looking to build or improve. Get in touch and let’s discuss how ATANU DIGITAL SOLUTION can help.</p><a class="btn" href="https://wa.me/8801877259123" target="_blank" rel="noopener">Chat on WhatsApp ↗</a></div>
+          <div>
+            <div class="contact-list">
+              <a class="contact-item" href="https://wa.me/8801877259123" target="_blank" rel="noopener"><span>💬</span><span><b>WhatsApp</b>+880 1877-259123</span></a>
+              <a class="contact-item" href="mailto:atanuworkers@gmail.com"><span>✉</span><span><b>Email</b>atanuworkers@gmail.com</span></a>
+              <a class="contact-item" href="https://www.facebook.com/share/1DDqBqPQMq/" target="_blank" rel="noopener"><span>f</span><span><b>Facebook</b>Visit our Facebook profile</span></a>
+              <a class="contact-item" href="https://www.instagram.com/atanu86769?vrfl=aTRmMGdkOXd1Mzg5" target="_blank" rel="noopener"><span>◎</span><span><b>Instagram</b>@atanu86769</span></a>
+            </div>
+            <div class="socials"><a href="https://www.facebook.com/share/1DDqBqPQMq/" target="_blank" rel="noopener">Facebook ↗</a><a href="https://www.instagram.com/atanu86769?vrfl=aTRmMGdkOXd1Mzg5" target="_blank" rel="noopener">Instagram ↗</a><a href="mailto:atanuworkers@gmail.com">Email ↗</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container"><span>© <span id="year"></span> ATANU DIGITAL SOLUTION. All rights reserved.</span><span>Professional Digital Solutions for Businesses Worldwide.</span></div></footer>
+  <a class="whatsapp" href="https://wa.me/8801877259123" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">✆</a>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰';});
+    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
